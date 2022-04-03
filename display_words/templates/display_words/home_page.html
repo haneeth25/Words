@@ -1,0 +1,21 @@
+{% extends 'main_template.html' %}
+
+{% block content %}
+
+{% for eachword in words %}
+<div class="card">
+    <div class="card-body">
+      <h3 class="card-text">{{eachword.word}}</h3>
+      <a href="{% url 'update_word' eachword.id %}" class="card-link">Update</a>
+      <a href="{% url 'delete_word' eachword.id %}" class="card-link">Delete</a>
+    </div>
+  </div>
+<br>
+{% endfor %}
+<style>
+    .card{
+  margin: auto;
+}
+</style>
+
+{% endblock content %}
