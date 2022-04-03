@@ -1,4 +1,3 @@
-from turtle import mode
 from django.shortcuts import redirect, render
 from . import models
 
